@@ -47,6 +47,7 @@ When you actually have the Classic theme enabled, it looks more like this:
 ![Test window running under Classic theme](images/testwindowclassic.png)
 ### App Blacklist
 ![The "App Blacklist" tab in the GUI](images/appblacklist.png)
+
 Here you can specify apps which don't work under the Classic theme. Enter the name of the executable into the text box, then click "Add" to add it to the list. To remove an app, click on its name in the list, then "Remove."
 
 When you click "OK" or "Apply," for each app added to the blacklist, Set-ClassicTheme will create a batch file under &lt;Installation Directory&gt;\Blacklist\ and a registry entry under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\ pointing to that batch file. It will also remove the registry aliases and batch files for apps which have been removed from the blacklist. The next time you attempt to run a blacklisted app, the batch file will run instead, intercepting the app launch through `Set-ClassicTheme -FilePath`.
