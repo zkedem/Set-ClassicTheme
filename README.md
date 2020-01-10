@@ -40,6 +40,7 @@ When run with the `-GUI` option, Set-ClassicTheme starts the Classic Theme GUI, 
 ![The main "Theme Settings" tab of the GUI](images/themesettings.png)
 
 Here you can enable and disable the Classic theme by selecting the appropriate radio button, then "OK" or "Apply." You can also test the Classic theme by clicking the test button. This starts a new PowerShell job which opens a popup window that looks like this:
+
 ![Test window running under Aero theme](images/testwindowaero.png)
 
 When you actually have the Classic theme enabled, it looks more like this:
