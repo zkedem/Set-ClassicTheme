@@ -53,10 +53,10 @@ Here you can specify apps which don't work under the Classic theme. Enter the na
 When you click "OK" or "Apply," for each app added to the blacklist, Set-ClassicTheme will create a batch file under &lt;Installation Directory&gt;\Blacklist\ and a registry entry under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\ pointing to that batch file. It will also remove the registry aliases and batch files for apps which have been removed from the blacklist. The next time you attempt to run a blacklisted app, the batch file will run instead, intercepting the app launch through `Set-ClassicTheme -FilePath`.
 
 ## Applications
-Since the Classic theme is rendered differently from other themes using visual styles (i.e. it doesn't have to pick out and draw visual style resources etc.), it can offer performance benefits on older hardware and in high-performance applications<sup>[5](#note5)</sup>, such as graphics/video editing, industrial process controls, MRI scanners<sup>[6](#note6)</sup>, and air traffic control towers<sup>[6](#note6)</sup>. If you've been clinging onto Windows 7 because you like the Classic theme, you'll enjoy Set-ClassicTheme too. If you're currently using Windows 8.1 or Windows 10 with another Classic theme enabling utility, the improvements in usability will be a welcome change.
+Since the Classic theme is rendered differently from other themes using visual styles (i.e. it doesn't have to pick out and draw visual style resources etc.), it can offer performance benefits on older hardware and in high-performance applications<sup>[4](#note4)</sup>, such as graphics/video editing, industrial process controls, MRI scanners<sup>[5](#note5)</sup>, and air traffic control towers<sup>[5](#note5)</sup>. If you've been clinging onto Windows 7 because you like the Classic theme, you'll enjoy Set-ClassicTheme too. If you're currently using Windows 8.1 or Windows 10 with another Classic theme enabling utility, the improvements in usability will be a welcome change.
 
 ## Themes and color schemes
-Since Microsoft removed the ability to directly apply the Classic visual style from Windows 8 onwards, its color scheme has been removed as well. The remaining High Contrast color schemes have been rewritten to use the Aero Lite visual style, a modified version of Aero that takes the same color parameters as Windows Classic. These will work fine with Set-ClassicTheme; they won't use aerolite.msstyles when the Classic theme is in effect<sup>[7](#note7)</sup>.
+Since Microsoft removed the ability to directly apply the Classic visual style from Windows 8 onwards, its color scheme has been removed as well. The remaining High Contrast color schemes have been rewritten to use the Aero Lite visual style, a modified version of Aero that takes the same color parameters as Windows Classic. These will work fine with Set-ClassicTheme; they won't use aerolite.msstyles when the Classic theme is in effect<sup>[6](#note6)</sup>.
 ![Set-ClassicTheme with High Contrast Black, CMD, and 7-Zip](images/highcontrastdemo.png)
 
 You can also use [windows10-classic-themes](https://github.com/zkedem/windows10-classic-themes), which are the Classic color schemes from Windows XP that I have adapted for use with Windows 10. The screenshot at the top of this document actually shows one of the color schemes from windows10-classic-themes.
@@ -74,7 +74,7 @@ I've also been considering a desk.cpl-like feature that allows the user to previ
 Any suggestions for improving the program's functionality, reliability, and features will always be welcome.
 
 ## License
-Set-ClassicTheme is free software licensed under the GNU GPL.
+Set-ClassicTheme is free software licensed under the GNU GPL, version 3.
 
 ## Footnotes
 <a name="note1">1</a>. This is not a filesystem directory; much like UNIX is a file-based OS, Windows NT is object-based, and these objects have their own directory tree separate from C:\, D:\, etc.
