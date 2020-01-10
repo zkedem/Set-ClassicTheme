@@ -11,7 +11,7 @@ Eventually, methods and utilities to enable the Classic theme in Windows 8+ were
 With this in mind, I set about creating my own utility which would enable and disable the Classic theme in a safe manner, while also allowing apps to bypass the Classic theme if they need to do so. It would be scriptable to a large degree and provide a user-friendly interface as well. This is just what Set-ClassicTheme does.
 
 ## How it works
-All Windows NT systems (or at least those since Windows XP) have a shared memory section called ThemeSection, located in \Sessions\&lt;Current Session ID&gt;\Windows\<sup>[1](#note1)</sup>. ThemeSection governs whether apps in Windows can use visual styles; if an app cannot read or query ThemeSection upon launch, it will fall back to the Classic theme. We could do this by simply closing the memory handle, but it's better just to deny the current user read/query permissions<sup>[2](#note2)</sup>, as that can be easily reversed.
+All Windows NT systems (or at least those since Windows XP) have a shared memory section called ThemeSection, located in \Sessions\<Current Session ID&gt;\Windows\<sup>1</sup>. ThemeSection governs whether apps in Windows can use visual styles; if an app cannot read or query ThemeSection upon launch, it will fall back to the Classic theme. We could do this by simply closing the memory handle, but it's better just to deny the current user read/query permissions<sup>[2](#note2)</sup>, as that can be easily reversed.
 
 In order to set the permissions for ThemeSection, we need to access the NT Object Manager. Rather than waste time trying to learn a new programming language like C++ or C#, I decided to write Set-ClassicTheme as a PowerShell script. PowerShell can interact with the Object Manager right out of the box, and supports the creation of WPF-based GUIs as well.
 
@@ -38,8 +38,10 @@ Specifies arguments, or parameters, to pass to the app set in `-FilePath`. By de
 When run with the `-GUI` option, Set-ClassicTheme starts the Classic Theme GUI, which is a WPF-based<sup>[4](#note4)</sup> graphical interface for setting up the Classic theme, as well as individual apps that won't run under the Classic theme. The Classic Theme GUI has been designed to look as close as possible to a normal Control Panel applet, as a default installation will place a link to it as "Classic Theme Settings" in Control Panel, under "Appearance and Personalization."
 ### Theme Settings
 ![The main "Theme Settings" tab of the GUI](images/themesettings.png)
+
 Here you can enable and disable the Classic theme by selecting the appropriate radio button, then "OK" or "Apply." You can also test the Classic theme by clicking the test button. This starts a new PowerShell job which opens a popup window that looks like this:
 ![Test window running under Aero theme](images/testwindowaero.png)
+
 When you actually have the Classic theme enabled, it looks more like this:
 ![Test window running under Classic theme](images/testwindowclassic.png)
 ### App Blacklist
