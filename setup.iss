@@ -8,6 +8,7 @@
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "zkedem"
 #define MyAppExeName "Set-ClassicTheme.ps1"
+#define MyAppURL "https://github.com/zkedem/Set-ClassicTheme"
 
 ; For Control Panel:
 #define CplGUID "{{5188F44B-EA9C-42D7-BFAF-1215FC051628}"
