@@ -67,6 +67,8 @@ Regardless of what color schemes you choose, you should disable the Classic them
 Set-ClassicTheme.ps1 was written using PowerShell ISE, which comes with Windows 10, though Visual Studio Code should work as well. The XAML for the Classic Theme GUI (MainWindow.xaml) was generated using Visual Studio 2019, then modified to work with PowerShell.
 
 ## To-do
+The app aliasing system used by the App Blacklist only works if you launch the app using the Run dialog. If you launch it from anywhere else (e.g. Start menu or desktop shortcut), it has no effect. I would like to find a suitable alternative.
+
 I'm thinking of adding a third tab to the GUI with options like enabling the classic Task Manager from Windows 7, classic context menus, classic calculator, etc.
 
 I've also been considering a desk.cpl-like feature that allows the user to preview the Classic theme and choose from different color schemes.
