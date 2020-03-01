@@ -1,0 +1,99 @@
+; Color scheme for Set-ClassicTheme version 1.1.0
+; Copyright © Ziv Kedem 2020
+; Original color scheme developed by Microsoft Corporation
+; Licensed under the GNU General Public License (GNU GPL) Version 3; full text located in LICENSE.txt
+
+[Theme]
+DisplayName=Windows Standard
+SetLogonBackground=0
+
+; Computer - SHIDI_SERVER
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-109
+
+; UsersFiles - SHIDI_USERFILES
+[CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-123
+
+; Network - SHIDI_MYNETWORK
+[CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-25
+
+; Recycle Bin - SHIDI_RECYCLERFULL SHIDI_RECYCLER
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+Full=%SystemRoot%\System32\imageres.dll,-54
+Empty=%SystemRoot%\System32\imageres.dll,-55
+
+[Control Panel\Colors]
+ActiveTitle=10 36 106
+Background=58 110 165
+Hilight=10 36 106
+HilightText=255 255 255
+TitleText=255 255 255
+Window=255 255 255
+WindowText=0 0 0
+Scrollbar=212 208 200
+InactiveTitle=128 128 128
+Menu=212 208 200
+WindowFrame=0 0 0
+MenuText=0 0 0
+ActiveBorder=212 208 200
+InactiveBorder=212 208 200
+AppWorkspace=128 128 128
+ButtonFace=212 208 200
+ButtonShadow=128 128 128
+GrayText=128 128 128
+ButtonText=0 0 0
+InactiveTitleText=212 208 200
+ButtonHilight=255 255 255
+ButtonDkShadow=64 64 64
+ButtonLight=212 208 200
+InfoText=0 0 0
+InfoWindow=255 255 225
+GradientActiveTitle=166 202 240
+GradientInactiveTitle=192 192 192
+ButtonAlternateFace=181 181 181
+HotTrackingColor=0 0 128
+MenuHilight=49 106 197
+MenuBar=236 233 216
+
+[Control Panel\Cursors]
+Arrow=
+Help=
+AppStarting=
+Wait=
+NWPen=
+No=
+SizeNS=
+SizeWE=
+Crosshair=
+IBeam=
+SizeNWSE=
+SizeNESW=
+SizeAll=
+UpArrow=
+DefaultValue=Windows default
+Link=
+
+[Control Panel\Desktop]
+Wallpaper=
+TileWallpaper=0
+WallpaperStyle=2
+Pattern=
+ScreenSaveActive=0
+
+[VisualStyles]
+Path=%SystemRoot%\resources\themes\Aero\AeroLite.msstyles
+ColorStyle=NormalColor
+Size=NormalSize
+HighContrast=5
+
+[boot]
+SCRNSAVE.EXE=
+
+[MasterThemeSelector]
+MTSM=RJSPBS
+
+[Sounds]
+; IDS_SCHEME_DEFAULT
+SchemeName=@%SystemRoot%\System32\mmres.dll,-800

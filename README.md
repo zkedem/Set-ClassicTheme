@@ -4,7 +4,7 @@
 ![Screenshot of Set-ClassicTheme in action.](images/demo.png)
 
 ## Background
-Windows 7 was the last version of Windows to support the Classic theme/visual style. With the release of Windows 8, users could no longer apply the Classic theme. This was despite it being baked into the core of the Windows operating system, unlike Aero or other visual styles.
+Windows 7 was the last version of Windows which allowed users to apply the Classic theme/visual style. With the release of Windows 8, users could no longer apply the Classic theme. This was despite it being baked into the core of the Windows operating system, unlike Aero or other visual styles.
 
 Eventually, methods and utilities to enable the Classic theme in Windows 8+ were developed. While these do enable the Classic theme, they do so in a rather crude manner, without any provisions for apps that don't work well, if at all, under the Classic theme. One such utility, [ClassicTheme.exe](https://forum.thinkpads.com/viewtopic.php?f=67&t=113024&hilit=Classic+theme+on+Windows+8), doesn't even allow you to switch back to your previous theme without a reboot!
 
@@ -56,15 +56,15 @@ When you click "OK" or "Apply," for each app added to the blacklist, Set-Classic
 Since the Classic theme is rendered differently from other themes using visual styles (i.e. it doesn't have to pick out and draw visual style resources etc.), it can offer performance benefits on older hardware and in high-performance applications<sup>[4](#note4)</sup>, such as graphics/video editing, industrial process controls, MRI scanners<sup>[5](#note5)</sup>, and air traffic control towers<sup>[5](#note5)</sup>. If you've been clinging onto Windows 7 because you like the Classic theme, you'll enjoy Set-ClassicTheme too. If you're currently using Windows 8.1 or Windows 10 with another Classic theme enabling utility, the improvements in usability will be a welcome change.
 
 ## Themes and color schemes
-Since Microsoft removed the ability to directly apply the Classic visual style from Windows 8 onwards, its color scheme has been removed as well. The remaining High Contrast color schemes have been rewritten to use the Aero Lite visual style, a modified version of Aero that takes the same color parameters as Windows Classic. These will work fine with Set-ClassicTheme; they won't use aerolite.msstyles when the Classic theme is in effect<sup>[6](#note6)</sup>.
+Since Microsoft removed the ability to directly apply the Classic visual style from Windows 8 onwards, its color scheme has been removed as well. The remaining High Contrast color schemes have been rewritten to use the Aero Lite visual style, a modified version of Aero that takes the same color parameters as the original Classic theme. These will work fine with Set-ClassicTheme; they will disregard aerolite.msstyles when the Classic theme is in effect<sup>[6](#note6)</sup>.
 ![Set-ClassicTheme with High Contrast Black, CMD, and 7-Zip](images/highcontrastdemo.png)
 
-You can also use [windows10-classic-themes](https://github.com/zkedem/windows10-classic-themes), which are the Classic color schemes from Windows XP that I have adapted for use with Windows 10. The screenshot at the top of this document actually shows one of the color schemes from windows10-classic-themes.
+As of version 1.1.0, the installer now includes an option to install the Windows Standard and Windows Classic color schemes adapted from Windows XP. I originally included these in another repository, [windows10-classic-themes](https://github.com/zkedem/windows10-classic-themes), which includes another 16 color schemes from XP adapted for use with Windows 10. The screenshot at the top of this document shows the Windows Standard scheme in use.
 
 Regardless of what color schemes you choose, you should disable the Classic theme when switching between them; not doing so can wreck the entire Windows UI.
 
 ## Development
-Set-ClassicTheme.ps1 was written using PowerShell ISE, which comes with Windows 10, though Visual Studio Code should work as well. The XAML for the Classic Theme GUI (MainWindow.xaml) was generated using Visual Studio 2019, then modified to work with PowerShell.
+Set-ClassicTheme.ps1 was written using PowerShell ISE, which comes with Windows 10, though Visual Studio Code should work as well. The XAML for the Classic Theme GUI (MainWindow.xaml) was generated using Visual Studio 2019; you can preview and modify it by opening ClassicThemeGUI.sln from the root of this repository.
 
 ## To-do
 The app aliasing system used by the App Blacklist only works if you launch the app using the Run dialog. If you launch it from anywhere else (e.g. Start menu or desktop shortcut), it has no effect. I would like to find a suitable alternative.

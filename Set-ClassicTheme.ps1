@@ -203,7 +203,7 @@ function Apply-GUISettings {
 # Start the WPF-based GUI.
 function Start-GUI {
     # The GUI is loaded from an XAML file in the same directory as the script.
-    [xml]$xaml = @"
+    $RawXaml = @"
     $(try {
         Get-Content .\MainWindow.xaml -Raw -ErrorAction Stop
     }
@@ -212,6 +212,10 @@ function Start-GUI {
         exit
     })
 "@
+    # PowerShell doesn't support certain properties, so we'll remove those.
+    $RawXaml = $RawXaml -replace 'x:','' -replace 'Class=.*','' -replace 'mc:.*',''
+    # Place XAML contents into new XML object.
+    [xml]$xaml = $RawXaml
     # Loading in the GUI.
     Add-Type -AssemblyName PresentationFramework
     $reader = (New-Object System.Xml.XmlNodeReader $xaml)

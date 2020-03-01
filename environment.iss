@@ -1,6 +1,6 @@
 ; environment.iss was orignially written by Wojciech Mleczek in response to a question from bandana on Stack Overflow.
 ; For more information, go to https://stackoverflow.com/a/46609047
-; NOTE: This version has a slight modification; the additional semicolon before "Path" is commented out.
+; NOTE: This version has a slight modification; the additional semicolon before "Path" in EnvAddPath() is commented out.
 
 [Code]
 const EnvironmentKey = 'SYSTEM\CurrentControlSet\Control\Session Manager\Environment';

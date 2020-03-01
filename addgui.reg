@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{5188F44B-EA9C-42D7-BFAF-1215FC051628}]
+@="Classic Theme Settings"
+"InfoTip"="Activate the Windows Classic theme."
+"System.ControlPanel.Category"="1"
+
+[HKEY_CLASSES_ROOT\CLSID\{5188F44B-EA9C-42D7-BFAF-1215FC051628}\DefaultIcon]
+@="%SystemRoot%\\System32\\psr.exe,-212"
+
+[HKEY_CLASSES_ROOT\CLSID\{5188F44B-EA9C-42D7-BFAF-1215FC051628}\Shell\Open\command]
+@="powershell.exe -Windowstyle Hidden Set-ClassicTheme -GUI"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{5188F44B-EA9C-42D7-BFAF-1215FC051628}]

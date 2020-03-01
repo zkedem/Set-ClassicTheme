@@ -1,0 +1,1 @@
+These files are not used by Set-ClassicTheme in operation; they are required when opening ClassicThemeGUI.sln in Visual Studio.
